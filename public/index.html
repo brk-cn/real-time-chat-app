@@ -9,12 +9,16 @@
   <body>
     <div id="chat-container">
       <h1>REAL-TIME CHAT</h1>
-      <div id="chat"></div>
+      <div id="chat">
+        <div id="typing"></div>
+      </div>
       <div id="input-container">
         <input type="text" id="username" placeholder="username ..." />
         <input type="text" id="message" placeholder="message ..." />
-        <button type="submit">SUBMIT</button>
+        <button type="submit" id="submit">SUBMIT</button>
       </div>
     </div>
   </body>
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="chat.js"></script>
 </html>
