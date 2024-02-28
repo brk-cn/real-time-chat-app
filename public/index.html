@@ -7,15 +7,22 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div id="chat-container">
-      <h1>REAL-TIME CHAT</h1>
-      <div id="chat">
-        <div id="typing"></div>
-      </div>
-      <div id="input-container">
-        <input type="text" id="username" placeholder="username ..." />
-        <input type="text" id="message" placeholder="message ..." />
-        <button type="submit" id="submit">SUBMIT</button>
+    <div id="join-container">
+      <header id="join-header">
+        <h1>REAL-TIME CHAT</h1>
+      </header>
+
+      <div id="join-form-container">
+        <form action="chat.html">
+          <label for="username">Username</label>
+          <input type="text" name="username" id="username" placeholder="username" required />
+          <label for="room">Room</label>
+          <select name="room" id="room">
+            <option value="room1">Room 1</option>
+            <option value="room2">Room 2</option>
+          </select>
+          <button id="join-room-btn" type="submit">Join Room</button>
+        </form>
       </div>
     </div>
   </body>

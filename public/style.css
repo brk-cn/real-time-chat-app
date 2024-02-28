@@ -9,7 +9,7 @@
 body {
   width: 100vw;
   height: 100vh;
-  color: #222831;
+  color: #393e46;
   background-color: #eee;
   display: flex;
   align-items: center;
@@ -17,42 +17,31 @@ body {
   font-family: "Roboto", sans-serif;
 }
 
-#chat-container {
-  max-width: 550px;
-  height: 550px;
-  border: 5px solid #00adb5;
-  display: flex;
-  flex-direction: column;
+#join-container {
+  width: 35%;
+  padding: 1rem 3rem;
 }
 
-h1 {
-  height: 3rem;
-  font-size: 1.2rem;
-  line-height: 2.8rem;
-  letter-spacing: 0.15rem;
-  text-align: center;
-  color: #eee;
+#join-header {
   background-color: #00adb5;
+  text-align: center;
+  padding: 1rem;
 }
 
-#chat {
-  flex: 1;
-  width: 300px;
-  overflow-y: auto;
-  border-bottom: 5px solid #00adb5;
-  padding: 0.5rem;
+#join-form-container {
+  width: 75%;
+  display: block;
+  margin: 0 auto;
 }
 
-#input-container {
-  display: flex;
-  font-family: "Courier New", Courier, monospace;
-  padding: 10px 20px;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-around;
+label {
+  display: block;
+  padding-top: 0.5rem;
+  color: #393e46;
+  letter-spacing: 0.025rem;
 }
 
-input {
+input[type="text"] {
   width: 100%;
   height: 1.5rem;
   margin-bottom: 0.5rem;
@@ -61,32 +50,186 @@ input {
   border: none;
   color: #eee;
   background-color: #393e46;
-}
-
-button {
-  width: 35%;
-  height: 2rem;
-  letter-spacing: 0.1rem;
-  border: none;
-  color: #eee;
-  background-color: #00adb5;
-  font-family: "Roboto", sans-serif;
-}
-
-button:hover {
-  scale: 1.03;
-}
-
-button:active {
-  scale: 0.97;
-}
-
-input:focus,
-button:focus {
-  outline: 0;
+  letter-spacing: 0.025rem;
 }
 
 input::placeholder {
   color: #eee;
   font-family: "Roboto", sans-serif;
+  letter-spacing: 0.025rem;
+}
+
+input:focus {
+  border: none;
+  outline: none;
+}
+
+select {
+  width: 100%;
+  height: 1.5rem;
+  margin-bottom: 0.5rem;
+  padding-left: 0.25rem;
+  font-family: "Roboto", sans-serif;
+  border: none;
+  color: #eee;
+  background-color: #393e46;
+  letter-spacing: 0.025rem;
+}
+
+select:focus {
+  border: none;
+  outline: none;
+}
+
+option {
+  letter-spacing: 0.025rem;
+}
+
+#join-room-btn {
+  width: 50%;
+  display: block;
+  margin: 0 auto;
+  height: 2.5rem;
+  font-size: 1rem;
+  letter-spacing: 0.1rem;
+  border: none;
+  color: #393e46;
+  font-weight: bold;
+  background-color: #00adb5;
+  font-family: "Roboto", sans-serif;
+}
+
+#join-room-btn:hover {
+  scale: 1.03;
+}
+
+#join-room-btn:active {
+  scale: 0.97;
+}
+
+#chat-container {
+  width: 65%;
+  height: 65%;
+}
+
+#chat-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #00adb5;
+  padding: 1rem;
+}
+
+#chat-header a {
+  text-decoration: none;
+  width: 7rem;
+  height: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #393e46;
+  background-color: #eee;
+}
+
+#chat-header a:hover {
+  scale: 1.03;
+}
+
+#chat-header a:active {
+  scale: 0.97;
+}
+
+#chat-main {
+  display: flex;
+  height: 75%;
+}
+
+#chat-sidebar {
+  width: 25%;
+  background-color: #393e46;
+  color: #eee;
+  padding: 0.5rem;
+}
+
+#chat-sidebar p {
+  font-size: 1.5rem;
+}
+
+#chat-sidebar ul {
+  padding-top: 0.25rem;
+  list-style: none;
+}
+
+#chat-messages {
+  width: 75%;
+  max-height: 100%;
+  overflow-y: scroll;
+  background-color: #00adb53f;
+  padding: 0.5rem;
+}
+
+.message {
+  opacity: 1;
+  background-color: #eee;
+  padding: 0.25rem;
+  margin: 0.25rem 0.5rem 1.25rem 0.5rem;
+  border-radius: 0.35rem;
+}
+
+.message .meta {
+  font-size: 1rem;
+  font-weight: bold;
+  color: #393e46;
+  margin-bottom: 0.25rem;
+}
+
+.message .meta span {
+  font-size: 0.75rem;
+  color: #393e46;
+  opacity: 0.75;
+}
+
+.message .text {
+  font-size: 1rem;
+}
+
+#chat-form-container {
+  height: 10%;
+}
+
+#chat-form {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 1rem;
+}
+
+#chat-form input {
+  display: inline;
+  width: 80%;
+  height: 2rem;
+  margin: auto;
+}
+
+#msg-send-btn {
+  display: inline;
+  width: 15%;
+  height: 2rem;
+  margin: auto;
+  font-size: 1rem;
+  letter-spacing: 0.1rem;
+  border: none;
+  color: #393e46;
+  background-color: #00adb5;
+  font-family: "Roboto", sans-serif;
+  font-weight: bold;
+}
+
+#msg-send-btn:hover {
+  scale: 1.03;
+}
+
+#msg-send-btn:active {
+  scale: 0.97;
 }

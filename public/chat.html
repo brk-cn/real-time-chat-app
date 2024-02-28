@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Real-Time Chat App</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="chat-container">
+      <header id="chat-header">
+        <h1>REAL-TIME CHAT</h1>
+        <a href="index.html" class="btn">Leave Room</a>
+      </header>
+      <main id="chat-main">
+        <div id="chat-sidebar">
+          <p>Room: <span>Room 1</span></p>
+          <p>Users</p>
+          <hr />
+          <ul id="users">
+            <li>Brad</li>
+            <li>John</li>
+            <li>Mary</li>
+            <li>Paul</li>
+            <li>Mike</li>
+          </ul>
+        </div>
+        <div id="chat-messages">
+          <div class="message">
+            <p class="meta">Brad <span>9:12pm</span></p>
+            <p class="text">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi, resdnfbsdj sdgbsdjh bjsd bjsdgbsj bjhb
+              sjdsbjgbsjdgbjsdpudiandae.
+            </p>
+          </div>
+          <div class="message">
+            <p class="meta">Mary <span>9:15pm</span></p>
+            <p class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi, repudiandae.</p>
+          </div>
+          <div class="message">
+            <p class="meta">Mary <span>9:15pm</span></p>
+            <p class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi, repudiandae.</p>
+          </div>
+        </div>
+      </main>
+      <div id="chat-form-container">
+        <form id="chat-form">
+          <input id="msg" type="text" placeholder="Enter Message" required autocomplete="off" />
+          <button id="msg-send-btn"><i class="fas fa-paper-plane"></i> Send</button>
+        </form>
+      </div>
+    </div>
+  </body>
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="chat.js"></script>
+</html>
