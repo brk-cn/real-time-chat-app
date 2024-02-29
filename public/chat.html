@@ -14,34 +14,12 @@
       </header>
       <main id="chat-main">
         <div id="chat-sidebar">
-          <p>Room: <span>Room 1</span></p>
+          <p>Room: <span id="room-name"></span></p>
           <p>Users</p>
           <hr />
-          <ul id="users">
-            <li>Brad</li>
-            <li>John</li>
-            <li>Mary</li>
-            <li>Paul</li>
-            <li>Mike</li>
-          </ul>
+          <ul id="users"></ul>
         </div>
-        <div id="chat-messages">
-          <div class="message">
-            <p class="meta">Brad <span>9:12pm</span></p>
-            <p class="text">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi, resdnfbsdj sdgbsdjh bjsd bjsdgbsj bjhb
-              sjdsbjgbsjdgbjsdpudiandae.
-            </p>
-          </div>
-          <div class="message">
-            <p class="meta">Mary <span>9:15pm</span></p>
-            <p class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi, repudiandae.</p>
-          </div>
-          <div class="message">
-            <p class="meta">Mary <span>9:15pm</span></p>
-            <p class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi, repudiandae.</p>
-          </div>
-        </div>
+        <div id="chat-messages"></div>
       </main>
       <div id="chat-form-container">
         <form id="chat-form">
@@ -51,6 +29,12 @@
       </div>
     </div>
   </body>
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/qs/6.11.2/qs.min.js"
+    integrity="sha512-vCegEXqPUYpZsTGz2lk0jaQ1psxtFeniVJACAXhMVxuoYa/N4nZkjoVFOxLwP7uGeQOoemiz7DQrIpRTj4IBPw=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  ></script>
   <script src="/socket.io/socket.io.js"></script>
-  <script src="chat.js"></script>
+  <script src="js/chat.js"></script>
 </html>
